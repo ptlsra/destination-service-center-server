@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>FedExServiceCenter</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="assets/css/best-carousel-slide.css">
+    <link rel="stylesheet" href="assets/css/Customizable-Background--Overlay.css">
+    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="assets/DataTables/datatables.min.css"/>
+
+</head>
+
+<body class="changebodycolor">
+<nav class="navbar navbar-expand-lg bg-light navbar-light bg-color-navheader">
+  <a class="navbar-brand" id="titlenav">
+    <img src="assets/img/fedexIcon.png" alt="FeEx" height="40px;">
+    </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"  aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12" id="content-heading" style="color:white;">
+            <br>
+            FedEx Driver Services 
+            
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+
+<div class ="container" style="background:white;color:black;font-size:11px;" >
+        <br>
+
+        <input type="button" id="create_pdf" value="Generate PDF">  
+
+ 
+    
+
+        <form class="form" id="formData">  
+
+            <table>
+                <tr>
+
+                    <td > <img src="assets/img/fedex-freight-4.png" height="100px;" width="100px;" style="margin-right:100px;"></td>
+                        <td style="font-size:20px;font-weight:bold;">Delivery <span style="margin-left:10px">Receipt </span></td>
+                    </tr>
+                    <tr>
+                        <td > <span style="margin-left:30%;">Freight Bill ID</td>
+                        <td id="freightBillIId"></td>
+                        </tr>
+                </table>
+                <br>
+        
+            <table class="table table-bordered" id="" style="font-size:10px; width:72%">
+              
+                <tbody>    
+
+                        <tr>
+                                <td colspan="2">220 FORWARD DRIVE</td>
+                                <td colspan="2">Ship Date</td>
+                                <td colspan="2" id="shipDate"></td>
+                                <td colspan="2">Bill of Lading</td>
+                                <td colspan="4" id="bolId"></td>
+                           
+                                
+                            </tr>
+
+                            <tr>
+                                    <td colspan="2">HARRISON AR,72601</td>
+                                    <td colspan="2">P.O</td>
+                                    <td colspan="2" id="po"></td>
+                                    <td colspan="2">Shipper Reference</td>
+                                    <td colspan="4"></td>
+                               
+                                    
+                                </tr>
+
+                                <tr>
+                                        <td colspan="2">fedex.com 1.866.393.4585</td>
+                                        <td colspan="2" >Origin</td>
+                                        <td colspan="2" id="origin"></td>
+                                        <td colspan="2">Destination</td>
+                                        <td colspan="4" id="destination"></td>
+                                   
+                                        
+                                    </tr>
+
+                                    <tr>
+                                            <td  >Consignee</td>
+                                            <td colspan="5"><span id="consignee"></span><span id="trailerNo" style="margin-left:50px;"></span>
+                                                <br> US
+                                            
+                                            </td>
+                                            <td   >Shipper</td>
+                                            <td id="shipper" colspan="5"></td>
+
+                                       
+                                            
+                                        </tr>
+
+                                    <tr>
+                                            <td  colspan="6"></td>
+                                            <td   colspan="6"></td>
+                                            
+                                       
+                                            
+                                        </tr>
+                    
+                    
+                    <tr>
+                        <td style="width:8.33%">PIECES</td>
+                        <td style="width:8.33%">PKG</td>
+                        <td style="width:8.33%">H/u</td>
+                        <td style="width:5.33%">HM</td>
+                        <td colspan="2" style="width:30.33%">Description</td>
+                        <td >WT</td>
+                        <td >NMFC</td>
+                        <td >PCF</td>
+                        <td >CLASS</td>
+                        <td >RATE</td>
+                        <td >TOTAL CHARGES</td>
+                        
+                    </tr>
+
+                    <tr>
+                            <td style="width:8.33%;font-size:9px;" id="pieces"></td>
+                            <td style="width:8.33%;font-size:9px;" id="pkgType"></td>
+                            <td style="width:8.33%;font-size:9px;" id="handlingUnit"></td>
+                            <td style="width:5.33%"></td>
+                            <td colspan="2" style="width:30.33%;font-size:9px;" id="description"></td>
+                            <td  style="font-size:9px;" id="weight"></td>
+                            <td  style="font-size:9px;" id="nmfcItemNo"></td>
+                            <td ></td>
+                            <td ></td>
+                            <td ></td>
+                            <td ></td>
+                            
+                        </tr>
+
+
+                    <tr>
+                            <td style="width:8.33%"></td>
+                            <td style="width:8.33%"></td>
+                            <td style="width:8.33%"></td>
+                            <td style="width:5.33%"></td>
+                            <td colspan="2" style="width:30.33%"></td>
+                            <td ></td>
+                            <td ></td>
+                            <td ></td>
+                            <td ></td>
+                            <td ></td>
+                            <td ></td>
+                            
+                        </tr>
+
+                    <tr>
+                            <td style="width:8.33%"></td>
+                            <td style="width:8.33%"></td>
+                            <td style="width:8.33%"></td>
+                            <td style="width:5.33%"></td>
+                            <td colspan="2" style="width:30.33%"></td>
+                            <td ></td>
+                            <td ></td>
+                            <td ></td>
+                            <td ></td>
+                            <td ></td>
+                            <td ></td>
+                            
+                        </tr>
+
+                        <tr>
+                                <td colspan="6"> ACCESORIAL SERVICES PERFORMED :
+                                    <br> <span style="font-size:9px;">___ INSIDE DELIVERY </span><span style="font-size:9px;margin-left:65px;" > ___ SORT & SEGREGATE ___ DETENTION  </span>
+                                    <br> <span style="font-size:9px;">___ RESEDENTIAL LIMIT ACCESS </span><span style="font-size:9px;margin-left:9px;" >___ LIFT GATE ___ OTHERS  </span>
+
+                                </td>
+
+                                <td colspan="6"> PREPAID :
+                                        <br> WILL INVOICE RESPONSIBLE PARTY
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                            <td colspan="6"> Delv Driver & # :
+                                                </td>
+                                                <td id="driverId"></td>
+                                                <td colspan="5"></td>
+                                                </tr>
+
+                                                <tr>
+                                                        <td > Date</td>
+                                                           
+                                                        <td id="dateOfDelivery"></td>
+                                                        <td > Arrive</td>
+                                                           
+                                                        <td id="arrivalTimeOfDriver"></td>
+                                                            <td > Depart</td>
+                                                           
+                                                            <td id="departureTimeOfDriver"></td>                                                                  
+                                                            <td colspan="6"></td>
+                                                           
+                                                            </tr>
+
+
+                                                <tr>
+                                                        <td > # of Skids</td>
+                                                           
+                                                            <td></td>
+                                                            <td ># of Pcs</td>
+                                                           
+                                                            <td id="pieceNew"></td>
+                                                            <td >OS&D #</td>
+                                                           
+                                                            <td></td>
+                                                          
+                                                            <td colspan="6"></td>
+                                                           
+                                                            </tr>
+                                                <tr>
+                                                            <td colspan="6"> Shipment recieved in apparent good order with wrap intact unless otherwise noted  :
+                                                                    <br> RECIEVED BY _______________________________
+                                                                    <br> <span style="font-size:9px;">___ OVER </span><span style="font-size:9px;margin-left:65px;" > ___ DAMAGE </span><span style="margin-left:60px;font-size:9px"> Exceptions:  </span>
+                                                                    <br> <span style="font-size:9px;">___ SHORT </span><span style="font-size:9px;margin-left:65px;" > ___ WRAP BROKEN  </span>
+
+                                                                </td>
+
+                                                                <td colspan="6"> CUSTOMER REQUIREMENT/ APPPOINTMENT INSTRUCTION  :
+                                                                        <br> 
+    
+                                                                    </td>
+                                                                </tr>
+                    
+
+                                                        
+                                        
+                                                                           
+
+                </tbody>
+              </table>
+              </form>
+
+
+              <form class="form" id="formDataNew">  
+
+                <table>
+                    <tr>
+    
+                        <td > <img src="assets/img/fedex-freight-4.png" height="100px;" width="100px;" style="margin-right:100px;"></td>
+                            <td style="font-size:20px;font-weight:bold;">Delivery <span style="margin-left:15px">Receipt </span></td>
+                        </tr>
+                        <tr>
+                            <td > <span style="margin-left:40%;">Freight</span> <span style="margin-left:7px"> Bill</span> <span style="margin-left:7px"> ID</span></td>
+                            <td id="freightBillIIdForForm"></td>
+                            </tr>
+                    </table>
+                    <br>
+            
+                <table class="table table-bordered" id="" style="font-size:10px; width:72%">
+                  
+                    <tbody>    
+    
+                            <tr>
+                                    <td colspan="2">220 FORWARD DRIVE</td>
+                                    <td colspan="2">Ship Date</td>
+                                    <td colspan="2" id="shipDateForm"></td>
+                                    <td colspan="2">Bill of Lading</td>
+                                    <td colspan="4" id="bolIdForm"></td>
+                               
+                                    
+                                </tr>
+    
+                                <tr>
+                                        <td colspan="2">HARRISON AR,72601</td>
+                                        <td colspan="2">P.O</td>
+                                        <td colspan="2" id="poForm"></td>
+                                        <td colspan="2">Shipper Reference</td>
+                                        <td colspan="4"></td>
+                                   
+                                        
+                                    </tr>
+    
+                                    <tr>
+                                            <td colspan="2">fedex.com 1.866.393.4585</td>
+                                            <td colspan="2" >Origin</td>
+                                            <td colspan="2" id="originForm"></td>
+                                            <td colspan="2">Destination</td>
+                                            <td colspan="4" id="destinationForm"></td>
+                                       
+                                            
+                                        </tr>
+    
+                                        <tr>
+                                                <td  >Consignee</td>
+                                                <td colspan="5"><span id="consigneeForm"></span><span id="trailerNoForm" style="margin-left:50px;"></span>
+                                                    <br> US
+                                                
+                                                </td>
+                                                <td   >Shipper</td>
+                                                <td id="shipperForm" colspan="5"></td>
+
+                                           
+                                                
+                                            </tr>
+    
+                                        <tr>
+                                                <td  colspan="6"></td>
+                                                <td   colspan="6"></td>
+                                                
+                                           
+                                                
+                                            </tr>
+                        
+                        
+                        <tr>
+                            <td style="width:8.33%" >PIECES</td>
+                            <td style="width:8.33%">PKG</td>
+                            <td style="width:8.33%">H/u</td>
+                            <td style="width:5.33%">HM</td>
+                            <td colspan="2" style="width:30.33%">Description</td>
+                            <td >WT</td>
+                            <td >NMFC</td>
+                            <td >PCF</td>
+                            <td >CLASS</td>
+                            <td >RATE</td>
+                            <td >TOTAL CHARGES</td>
+                            
+                        </tr>
+    
+                        <tr>
+                                <td style="width:8.33%;font-size:9px;" id="piecesForm"></td>
+                                <td style="width:8.33%;font-size:9px;" id="pkgTypeForm"></td>
+                                <td style="width:8.33%;font-size:9px;"  id="handlingUnitForm"></td>
+                                <td style="width:5.33%"></td>
+                                <td colspan="2" style="width:30.33%;font-size:9px;" id="descriptionForm"></td>
+                                <td  style="font-size:9px;" id="weightForm"></td>
+                                <td  style="font-size:9px;" id="nmfcItemNoForm"></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                
+                            </tr>
+    
+    
+                        <tr>
+                                <td style="width:8.33%"></td>
+                                <td style="width:8.33%"></td>
+                                <td style="width:8.33%"></td>
+                                <td style="width:5.33%"></td>
+                                <td colspan="2" style="width:30.33%"></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                
+                            </tr>
+    
+                        <tr>
+                                <td style="width:8.33%"></td>
+                                <td style="width:8.33%"></td>
+                                <td style="width:8.33%"></td>
+                                <td style="width:5.33%"></td>
+                                <td colspan="2" style="width:30.33%"></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                
+                            </tr>
+    
+                            <tr>
+                                    <td colspan="6"> ACCESORIAL <span style="margin-left:7px;">SERVICES</span> <span style="margin-left:7px;">PERFORMED</span> :
+                                        <br> <span style="font-size:9px;">___ INSIDE DELIVERY </span><span style="font-size:9px;margin-left:65px;" > ___ SORT & SEGREGATE ___ DETENTION  </span>
+                                        <br> <span style="font-size:9px;">___ RESEDENTIAL LIMIT ACCESS </span><span style="font-size:9px;margin-left:9px;" >___ LIFT GATE ___ OTHERS  </span>
+    
+                                    </td>
+    
+                                    <td colspan="6"> PREPAID :
+                                            <br> WILL <span style="margin-left:7px;"> INVOICE</span>
+                                            <br> RESPONSIBLE <span style="margin-left:7px;">PARTY</span>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                                <td colspan="6">Delv<span style="margin-left:7px;"> Driver</span> <span style="margin-left:7px;">& #</span> :
+                                                    </td>
+                                                    <td id="driverIdForm" colspan="6"></td>
+                                                   
+                                                    </tr>
+    
+                                                    <tr>
+                                                            <td > Date</td>
+                                                               
+                                                            <td id="dateOfDeliveryForm"></td>
+                                                            <td > Arrive</td>
+                                                               
+                                                            <td id="arrivalTimeOfDriverForm"></td>
+                                                                <td > Depart</td>
+                                                               
+                                                                <td id="departureTimeOfDriverForm"></td>                                                                  
+                                                                <td colspan="6"></td>
+                                                               
+                                                                </tr>
+    
+    
+                                                    <tr>
+                                                            <td > # of Skids</td>
+                                                               
+                                                                <td></td>
+                                                                <td># of Pcs</td>
+                                                               
+                                                                <td  id="pieceNewForm"></td>
+                                                                <td >OS&D #</td>
+                                                               
+                                                                <td></td>
+                                                              
+                                                                <td colspan="6"></td>
+                                                               
+                                                                </tr>
+                                                    <tr>
+                                                                <td colspan="6"> Shipment recieved in apparent good order with wrap intact unless otherwise noted  :
+                                                                <br> RECIEVED BY ____________<span style="font-size:9px;margin-left:10px;" id="recievedByForm"> </span>___________________
+                                                                        <br> <span style="font-size:9px;">___ OVER </span><span style="font-size:9px;margin-left:65px;" > ___ DAMAGE </span><span style="margin-left:60px;font-size:9px"> Exceptions:  </span>
+                                                                        <br> <span style="font-size:9px;">___ SHORT </span><span style="font-size:9px;margin-left:65px;" > ___ WRAP BROKEN  </span>
+    
+                                                                    </td>
+    
+                                                                    <td colspan="6"> CUSTOMER <span style="margin-left:7px;">REQUIREMENT/</span><span style="margin-left:9px;">APPPOINTMENT</span> <span style="margin-left:7px;">INSTRUCTION </span> :
+                                                                            <br> 
+        
+                                                                        </td>
+                                                                    </tr>
+                        
+    
+                                                               
+                                                                                
+                                            
+                                                                               
+    
+                    </tbody>
+                  </table>
+                  </form>
+
+
+             <br>
+
+     </div>
+     
+
+
+
+<br>
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/DataTables/datatables.min.js"></script>
+    <script src="assets/js/getDRDetails.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>  
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>  
+    <script type="text/javascript" src="assets/DataTables/datatables.min.js"></script>
+
+
+    
+
+    <script>
+      var getUrlParameter = function getUrlParameter(sParam) {
+	    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+	        sURLVariables = sPageURL.split('&'),
+	        sParameterName,
+	        i;
+
+	    for (i = 0; i < sURLVariables.length; i++) {
+	        sParameterName = sURLVariables[i].split('=');
+
+	        if (sParameterName[0] === sParam) {
+	            return sParameterName[1] === undefined ? true : sParameterName[1];
+	        }
+	    }
+	};
+
+  var driverId = getUrlParameter('driverId');
+
+  	$.get("/driver/"+driverId, function(response){
+
+document.getElementById('cityDriverId').innerHTML=driverId;
+document.getElementById('cityDriverType').innerHTML=response.driverType;
+
+document.getElementById('cityDriverEmailID').innerHTML=response.emailId;
+document.getElementById('cityDriverFirstName').innerHTML=response.firstName;
+
+document.getElementById('cityDriverLastName').innerHTML=response.lastName;
+
+          
+document.getElementById('cityDriverServiceCenterId').innerHTML=response.scId;
+
+                    
+
+    });
+  
+
+      </script>
+  <script>  
+        $('#formData').hide();
+    
+                (function () {  
+                    var  
+                     form = $('#formDataNew'),  
+                     cache_width = form.width(),  
+               //      a4 = [540.28, 841.89]; // for a4 size paper width and height  
+                    a4 = [800, 1200]; // for a4 size paper width and height  
+              
+                    $('#create_pdf').on('click', function () {  
+                        $('body').scrollTop(0);  
+                        createPDF();  
+                    });  
+                    //create pdf  
+                    function createPDF() {  
+                        getCanvas().then(function (canvas) {  
+                            var  
+                             img = canvas.toDataURL("image/png"),  
+                          
+                             doc = new jsPDF({  
+                                 unit: 'px',  
+                                 format: 'a4'  ,
+                                 lineHeight: 1.5
+                             });  
+         
+        
+                         
+                             
+                            doc.addImage(img, 'JPEG', 10, 30);  
+                            doc.save('DR.pdf');  
+                            form.width(cache_width);  
+                            
+                        });  
+                    }  
+              
+                    // create canvas object  
+                    function getCanvas() {  
+                        form.width(800).css('max-width', 'none');  
+                        return html2canvas(form, {  
+                            imageTimeout: 2000,  
+                            removeContainer: true  
+                        });  
+                    }  
+              
+                }());  
+            </script>  
+            <script>  
+                /* 
+             * jQuery helper plugin for examples and tests 
+             */  
+                (function ($) {  
+                    $.fn.html2canvas = function (options) {  
+                        var date = new Date(),  
+                        $message = null,  
+                        timeoutTimer = false,  
+                        timer = date.getTime();  
+                        html2canvas.logging = options && options.logging;  
+                        html2canvas.Preload(this[0], $.extend({  
+                            complete: function (images) {  
+                                var queue = html2canvas.Parse(this[0], images, options),  
+                                $canvas = $(html2canvas.Renderer(queue, options)),  
+                                finishTime = new Date();  
+              
+                                $canvas.css({ position: 'absolute', left: 0, top: 0 }).appendTo(document.body);  
+                                $canvas.siblings().toggle();  
+              
+                                $(window).click(function () {  
+                                    if (!$canvas.is(':visible')) {  
+                                        $canvas.toggle().siblings().toggle();  
+                                        throwMessage("Canvas Render visible");  
+                                    } else {  
+                                        $canvas.siblings().toggle();  
+                                        $canvas.toggle();  
+                                        throwMessage("Canvas Render hidden");  
+                                    }  
+                                });  
+                                throwMessage('Screenshot created in ' + ((finishTime.getTime() - timer) / 1000) + " seconds<br />", 3000);  
+                            }  
+                        }, options));  
+              
+                        function throwMessage(msg, duration) {  
+                            window.clearTimeout(timeoutTimer);  
+                            timeoutTimer = window.setTimeout(function () {  
+                                $message.fadeOut(function () {  
+                                    $message.remove();  
+                                });  
+                            }, duration || 2000);  
+                            if ($message)  
+                                $message.remove();  
+                            $message = $('<div ></div>').html(msg).css({  
+                                margin: 0,  
+                                padding: 10,  
+                                background: "#000",  
+                                opacity: 0.7,  
+                                position: "fixed",  
+                                top: 10,  
+                                right: 10,  
+                                fontFamily: 'Tahoma',  
+                                color: '#fff',  
+                                fontSize: 12,  
+                                borderRadius: 12,  
+                                width: 'auto',  
+                                height: 'auto',  
+                                textAlign: 'center',  
+                                textDecoration: 'none'  
+                            }).hide().fadeIn().appendTo('body');  
+                        }  
+                    };  
+                })(jQuery);  
+              
+            </script>  
+        
+        
+    
+    </body>
+    
+    </html>
+
+          
+</body>
+
+</html>

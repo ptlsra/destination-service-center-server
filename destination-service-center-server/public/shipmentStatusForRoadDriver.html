@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>FedExServiceCenter</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="assets/css/best-carousel-slide.css">
+    <link rel="stylesheet" href="assets/css/Customizable-Background--Overlay.css">
+    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="assets/DataTables/datatables.min.css"/>
+
+</head>
+
+<body class="changebodycolor">
+<nav class="navbar navbar-expand-lg bg-light navbar-light bg-color-navheader">
+  <a class="navbar-brand" id="titlenav">
+    <img src="assets/img/fedexIcon.png" alt="FeEx" height="40px;">
+    </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"  aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12" id="content-heading" style="color:white;">
+            <br>
+            FedEx Road Driver Services 
+            
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+<div class="container" id="shipmentDisplayContainer" style="font-size:10px;">
+
+        <!--Display data as per txStatus -->
+    
+         
+      </div>
+
+
+      <div class="modal fade" id="txDetailsModal">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content black">
+              
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h6 class="modal-title">Transaction details</h6>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <table class="table table-bordered">
+                    <tr>
+                      <td>TxID</td>
+                      <td id="txDetailsModalTxId"></td>
+                      </tr>
+      <tr>
+                      <td>TimeStamp</td>
+                      <td id="txDetailsModalTimestamp"></td>
+                      </tr>
+                   
+                      <tr>
+      
+                    <td>Channel ID</td>
+                    <td id="txDetailsModalChannelId"></td>
+                    </tr>
+      
+                    <tr>
+      
+                        <td>Executed By</td>
+                        <td id="txDetailsModalExecutedBy"></td>
+                        </tr>
+                    </table>
+                </div>
+                
+              
+              </div>
+            </div>
+          </div>
+
+
+<div class="modal fade" id="pending">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content black">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h6 class="modal-title">Processing Request</h6>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+        <img src="assets/img/loading.gif" height="100px;" width="100px;" style="margin-left:40%;">
+            </div>
+            
+          
+          </div>
+        </div>
+      </div>
+        
+    
+    
+    
+    
+    <div class="modal fade" id="success">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content black">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h6 class="modal-title">Transaction Successfully sent to Orderer with TXID:</h6>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+    <p id="txHashstatus"></p>
+            </div>
+            
+          
+          </div>
+        </div>
+      </div>
+    
+    
+      <div class="modal fade" id="txFail">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content black">
+            
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h6 class="modal-title">Transaction Successfully sent to Orderer with TXID:</h6>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              
+              <!-- Modal body -->
+              <div class="modal-body">
+      <p id="txFailMessage"></p>
+              </div>
+              
+            
+            </div>
+          </div>
+        </div>
+        
+    
+
+  <div class="modal fade" id="setImageModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content black">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h6 class="modal-title">Uploaded Image</h6>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+ <div id="setImageData" ></div>
+          </div>
+          
+        
+        </div>
+      </div>
+    </div>
+
+
+<br>
+<footer id="footer">
+    
+    <div id="footer-container">
+        <p id="footer-content">
+             <img src="assets/img/Logo.png">
+            Developed by BlockChain COE |Mphasis Ltd.</p>
+    </div>
+</footer>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/DataTables/datatables.min.js"></script>
+    <script src="assets/js/shipmentStatusForRoadDriver.js"></script>
+    <script src="assets/js/updateShipmentByRoadDriver.js"></script>
+    <script src="assets/js/confirmShipmentDeliveryByRoadDriver.js"></script>
+
+
+
+    
+
+ 
+   
+
+
+</body>
+
+</html>

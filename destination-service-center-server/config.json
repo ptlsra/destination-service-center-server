@@ -1,0 +1,18 @@
+{
+"peerAddresses":["peer0.fedex.example.com"],
+"orgName":"fedex",
+"chaincodes":[
+    "pickup","shipment","delivery"
+],
+"channelName":"fedexchannel",
+"networkConnectionProfile":"network-connection-profile-path",
+"orgConnectionProfile":"fedex-connection-profile-path",
+"adminUserName":"admin",
+"orgMSP":"FedExMSP",
+"serviceCenterId":"servicecenter-002",
+"servicecenters":[
+    "servicecenter-001",
+    "servicecenter-002"
+],
+"destinationServiceCenterId":"servicecenter-001"
+}

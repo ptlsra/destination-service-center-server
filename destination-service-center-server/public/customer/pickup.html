@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>FedEx</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="assets/DataTables/datatables.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   
+
+</head>
+
+<body>
+
+    <div id="commonHeader"></div>
+
+
+
+
+
+
+<div class="container">
+        <br>
+        <!-- Nav pills -->
+        <ul class="nav nav-pills nav-justified nav-filter" role="tablist">
+          <li class="navbar-custom nav-item" id="pill1">
+            <a class="nav-link active" data-toggle="pill" href="#home">All Pickups</a>
+          </li>
+          <li class="navbar-custom nav-item" id="pill2">
+            <a class="nav-link" data-toggle="pill" href="#menu1">Create A Pickup</a>
+          </li>
+         
+        </ul>
+      
+        <!-- Tab panes -->
+        <div class="tab-content fontsizecustom">
+          <div id="home" class="container tab-pane active"><br>
+            <h3 id="fedexcustomername">List of All Pickups for</h3>
+
+            <table class="table-fill table-bordered" id="listofPickupForASingleCustomer" style="color:black;background-color:white;">
+  
+                </table>
+        </div>
+          <div id="menu1" class="container tab-pane fade"><br>
+            <h3>Create a Pickup Order</h3>
+
+
+            <form id="createpickuporderform" action='' method='post'>
+
+                    <table class="table table-bordered">
+                      <tr>
+                        <td>First Name</td>
+                        <td><input type="text" class="fullwidth" readonly  id="customerFirstNameAttributeForPickupOrder" name="customerFirstNameAttributeForPickupOrder"></td>
+                        </tr>
+        
+                        <tr>
+                            <td>Last Name</td>
+                            <td><input type="text" class="fullwidth" readonly  id="customerLastNameAttributeForPickupOrder" name="customerLastNameAttributeForPickupOrder"></td>
+                            </tr>
+        
+                        <tr>
+                            <td>Email ID</td>
+                            <td><input type="email" class="fullwidth" readonly required  id="customerEmailIDAttributeForPickupOrder" name="customerEmailIDAttributeForPickupOrder"></td>
+                        </tr>
+        
+        
+                        <tr>
+                            <td>Select Consignee</td>
+                            <td><select id="selectConsignee" class="fullwidth">
+                                
+                                </select>
+                            </td>
+                        </tr>
+        
+                        <tr>
+                            <td>Email ID of Consignee</td>
+                            <td><input type="email" class="fullwidth" readonly required  id="emailIDofconsignee" name="emailIDofconsignee"></td>
+                            </tr>
+        
+                            <tr>
+                                <td>Customer ID</td>
+                                <td><input type="text" class="fullwidth" readonly  id="customerAddressAttributeForPickupOrder" name="customerAddressAttributeForPickupOrder"></td>
+                                </tr>
+        
+                                <input type="text" class="fullwidth" readonly  id="consigneeAttributeForPickupOrder" name="consigneeAttributeForPickupOrder">
+                                
+                                <tr>
+                                    <td>Pickup Window (From)</td>
+                                    <td>
+                                            <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                                                <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1" id="pickupWindowFrom"/>
+                                                <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="fa fa-calendar"></i>
+                                               
+                                           
+                                        
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                            </td>
+                            </tr>
+
+
+                            <tr>
+                                    <td>Pickup Window (To)</td>
+                                    <td>
+                                            <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
+                                                <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker2" id="pickupWindowTo"/>
+                                                <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="fa fa-calendar"></i>
+                                               
+                                           
+                                        
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                            </td>
+                            </tr>
+
+                            <tr>
+                                    <td>Delivery Window (From)</td>
+                                    <td>
+                                            <div class="input-group date" id="datetimepicker3" data-target-input="nearest">
+                                                <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker3" id="deliveryWindowFrom"/>
+                                                <div class="input-group-append" data-target="#datetimepicker3" data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="fa fa-calendar"></i>
+                                               
+                                           
+                                        
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                            </td>
+                            </tr>
+
+
+                            <tr>
+                                    <td>Delivery Window (To)</td>
+                                    <td>
+                                            <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
+                                                <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker4" id="deliveryWindowTo"/>
+                                                <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="fa fa-calendar"></i>
+                                               
+                                           
+                                        
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                            </td>
+                            </tr>
+
+                      </table>
+          <input type="submit" value="Submit Details" class="btn btn-primary btn-block" >
+                  </form>
+         
+
+        </div>
+         
+        </div>
+      </div>
+      
+  
+
+
+
+
+
+
+
+
+<!--Login Modal -->
+
+
+
+
+<div class="modal fade" id="pending">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h6 class="modal-title">Processing Request</h6>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+    <img src="assets/img/loading.gif" height="100px;" width="100px;" style="margin-left:40%;">
+        </div>
+        
+      
+      </div>
+    </div>
+  </div>
+
+
+
+<div class="modal fade" id="profileModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h6 class="modal-title" id="profileModalTitle">Profile Details</h6>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <table class="table table-bordered">
+            <tr>
+              <td>FirstName</td>
+                <td id="FedexCustomerFirstName" class="fontclassbold"></td>
+              </tr>
+
+
+              <tr>
+                  <td>LastName</td>
+                    <td id="FedexCustomerLastName" class="fontclassbold"></td>
+                  </tr>
+                  <tr>
+                      <td>Customer ID</td>
+                        <td id="FedexCustomerID" class="fontclassbold"></td>
+                      </tr>
+
+                      <tr>
+                          <td>Phone Number</td>
+                            <td id="FedexCustomerPhoneNumber" class="fontclassbold"></td>
+                          </tr>
+
+                          <tr>
+                              <td>Email ID</td>
+                                <td id="FedexCustomerEmailID" class="fontclassbold"></td>
+                              </tr>
+            </table>
+        </div>
+        
+      
+      </div>
+    </div>
+  </div>
+  
+
+
+<div class="modal fade" id="success">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h6 class="modal-title">Transaction Successfully sent to Orderer with TXID:</h6>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+<p id="txHashstatus"></p>
+        </div>
+        
+      
+      </div>
+    </div>
+  </div>
+    
+
+
+
+  <div class="modal fade" id="txFail">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h6 class="modal-title">Transaction Successfully sent to Orderer with TXID:</h6>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+  <p id="txFailMessage"></p>
+          </div>
+          
+        
+        </div>
+      </div>
+    </div>
+
+
+
+  <div class="modal fade" id="logoutModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h6 class="modal-title">Please wait while you are logged out</h6>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+    <img src="assets/img/loading.gif" height="100px;" width="100px;" style="margin-left:40%;">
+        </div>
+        
+      
+      </div>
+    </div>
+  </div>
+    
+    
+<br>
+           
+<footer class="page-footer font-small footerstyle">
+
+   
+   
+    
+    
+    <div class="footer-copyright text-center py-3">Developed by BlockchainCOE
+    </div>
+   
+
+  </footer>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/commonHeader.js"></script>
+    <script src="assets/js/customerLogout.js"></script>
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
+    <script type="text/javascript" src="assets/DataTables/datatables.min.js"></script>
+    <script src="assets/js/getPickupByCustomerId.js"></script>
+
+</body>
+
+<script>
+
+     //document.getElementById('pill1').style.backgroundColor = "#4d148c"; 
+
+    setTimeout(function(){
+  
+  var custId=localStorage.getItem("DestcustomerId");
+  
+  if(custId){
+    $('#defaultLogin').hide();
+      $('#registerCustomer').hide();
+
+            document.getElementById("customerName").innerHTML = 'Welcome '+localStorage.getItem("DestcustomerFirstName")+" "+localStorage.getItem("DestcustomerLastName");
+            
+            
+             
+             
+             
+
+            document.getElementById('FedexCustomerFirstName').innerHTML=localStorage.getItem("DestcustomerFirstName");
+            document.getElementById('FedexCustomerLastName').innerHTML=localStorage.getItem("DestcustomerLastName");
+            document.getElementById('FedexCustomerID').innerHTML=localStorage.getItem("DestcustomerId") ;
+            document.getElementById('FedexCustomerPhoneNumber').innerHTML=localStorage.getItem("DestcustomerPhoneNo");
+
+            document.getElementById('FedexCustomerEmailID').innerHTML=localStorage.getItem("DestcustomerEmailId") ;
+            $('#customerAddressAttributeForPickupOrder').val(customerId);
+            $('#customerFirstNameAttributeForPickupOrder').val(firstName);
+            $('#customerLastNameAttributeForPickupOrder').val(lastName);
+            $('#customerEmailIDAttributeForPickupOrder').val(mailId);
+
+  }else{
+
+  $('#loginSuccess').hide();
+  $('#logOutOption').hide();
+  $('#profileTab').hide();
+
+  }
+}, 200);
+
+         
+
+</script>
+
+
+
+
+   
+
+
+    <script>
+
+        
+    
+$("#consigneeAttributeForPickupOrder").hide();
+         $('#selectConsignee').append($('<option>', { 
+		        value: 'None',
+		        text : 'None' 
+		    }
+		    
+		    ));
+		 
+		$.getJSON("/customers", function(response){
+
+		$.each(response, function (i, item) {
+            var customerId=localStorage.getItem("customerId");
+            var customerIdFromResponse=item.record.customerId;
+            if(customerId==customerIdFromResponse){
+            
+            }else{
+                $('#selectConsignee').append($('<option>', { 
+		        value: item.record.customerId,
+		        text : item.record.firstName+' '+item.record.lastName
+		    }
+            
+		   
+		    
+            ));
+        }
+		});
+            });
+            
+
+        $("#selectConsignee").change(function(){
+        var selectedAttribute= $("#selectConsignee").val();
+      //  alert(selectedAttribute);
+        if(selectedAttribute=='None'){
+
+        }
+        else{
+            
+            
+            $.get("/customer/"+selectedAttribute, function(response){
+
+            $("#consigneeAttributeForPickupOrder").val(response.firstName+'_'+response.lastName);
+            $("#emailIDofconsignee").val(response.emailId)
+        });     
+    }
+}); 
+        </script>
+
+<script>
+
+          
+     
+
+
+      $("form#createpickuporderform").submit(function(e) {
+    e.preventDefault();
+
+   // $('#pending').modal(); // hode register driver modal
+
+   var fedExCustomerName= $('#customerFirstNameAttributeForPickupOrder').val()+'_'+$('#customerLastNameAttributeForPickupOrder').val();
+
+   var customerEmailIDAttributeForPickupOrder= $('#customerEmailIDAttributeForPickupOrder').val();
+   var emailIDofconsignee= $('#emailIDofconsignee').val();
+   var customerAddressAttributeForPickupOrder= $('#customerAddressAttributeForPickupOrder').val();
+   var consigneeAttributeForPickupOrder= $('#consigneeAttributeForPickupOrder').val();
+   var pickupWindowFrom= $('#pickupWindowFrom').val();
+   var pickupWindowTo= $('#pickupWindowTo').val();
+   var deliveryWindowTo= $('#deliveryWindowTo').val();
+   var deliveryWindowFrom= $('#deliveryWindowFrom').val();
+
+    var consigneeId= $("#selectConsignee").val();
+
+  
+   var data = {
+    
+	"shipperName":fedExCustomerName,
+	"shipperEmailId":customerEmailIDAttributeForPickupOrder,
+	"consigneeName":consigneeAttributeForPickupOrder,
+	"consigneeEmailId":emailIDofconsignee,
+  "shipperId":customerAddressAttributeForPickupOrder,
+  "pickupFrom":pickupWindowFrom,
+  "pickupTo":pickupWindowTo,
+  "deliveryFrom":deliveryWindowFrom,
+  "deliveryTo":deliveryWindowTo,
+  "consigneeId":consigneeId
+
+
+   };
+
+   $.ajax({
+   	
+       dataType:"json",
+       contentType: 'application/json; charset=UTF-8',
+      // url:"/requestBOL?assetId="+assetId,		
+      url:"/pickup",	
+      data: JSON.stringify(data),
+       type:"POST",
+       global:false,
+       async:false, 
+       success: function(result){
+    //    $('#pending').modal('hide'); 
+//alert(JSON.stringify(result))
+       
+        
+      
+        var txId=result.txId;
+        var success=result.success;
+
+        if(success==true){
+          document.getElementById("txHashstatus").innerHTML = txId; 
+         
+       $('#success').modal(); // 
+
+    		   
+    		   setTimeout(function(){ 
+                   
+    	              window.location.href="pickup.html";
+    	              return false;
+    	           }, 2000);
+    		   			
+    	   
+    		   
+    	   }else{
+          document.getElementById("txFailMessage").innerHTML = 'Transaction has failed.Please try again later.'; 
+          $('#txFail').modal(); 
+
+            setTimeout(function(){ 
+                   
+                   window.location.href="pickup.html";
+                   return false;
+                }, 2000);
+          
+         }
+			
+
+        }
+		  
+			
+			
+           
+         
+    	
+    });
+});
+
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker1').datetimepicker();
+        $('#datetimepicker2').datetimepicker();
+        $('#datetimepicker3').datetimepicker();
+        $('#datetimepicker4').datetimepicker();
+
+
+       
+    });
+  
+</script>
+
+
+
+</html>

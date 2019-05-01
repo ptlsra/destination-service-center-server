@@ -1,0 +1,325 @@
+.bg-color-navheader {
+  background-color: #4d148c;
+  color: white;
+  /*margin-left: 50%;*/
+  font-size: 14px;
+}
+
+.whitecolor {
+  color: white;
+}
+
+.navbar-brand {
+  background-color: #4d148c;
+  /*margin-left: 40%;*/
+  font-size: 12px;
+}
+
+#bannerImage {
+  background-image: url("../../assets/img/fedex4.jpg");
+  object-fit: scale-down;
+  background-repeat: no-repeat;
+  /*width: auto;*/
+  background-size: cover;
+  /*width: 300px;*/
+}
+
+.heading-middle {
+  text-align: center;
+  font-weight: bold;
+}
+
+.rowwidth {
+  height: 100px;
+}
+
+colimage {
+  height: 70px;
+}
+
+.fontbold {
+  font-weight: bolder;
+}
+
+div {
+}
+
+.footerstyle {
+  background-color: #4d148c;
+  color: white;
+  margin-top: 20px;
+}
+
+
+.customfont{
+  font-size: 14px;
+}
+
+.fullwidth{
+  width: 100%;
+}
+
+.btn.btn-primary {
+  background-color: #4d148c!important;
+  border-color: #4d148c!important;
+}
+
+.fontclassbold{
+  font-weight: bold;
+}
+
+
+.bgfedexpurple{
+  background-color: #4d148c!important;
+
+}
+
+
+
+
+.nav-pills > li > a.active {
+  background-color: #4d148c!important;
+  color:white;
+}
+
+.nav-pills > li > a {
+  color:black;
+}
+
+
+.fontsizecustom{
+  font-size: 14px;
+}
+
+
+.vl {
+  border-left: 2px solid green;
+  height: 28px;
+  position: relative;
+ 
+  margin-left: 20px;
+ 
+}
+.vt {
+  border-left: 2px solid blue;
+  height: 40px;
+  position: relative;
+ 
+  margin-left: 20px;
+ 
+}
+.vs {
+  border-left: 2px solid blue;
+  height: 25px;
+  position: relative;
+ 
+  margin-left: 20px;
+ 
+}
+.vm {
+  border-left: 2px solid blue;
+  height: 30px;
+  position: relative;
+ 
+  margin-left: 20px;
+ 
+}
+
+.b {
+  margin-left: 10px;
+ 
+}
+
+
+.imageprop{
+height:22px;
+width:22px;
+}
+
+.marginleftcustom{
+  margin-left: 20px;
+}
+
+
+.buttonLink {
+  background:none!important;
+  color:inherit;
+  border:none; 
+  padding:0!important;
+  font: inherit;
+  /*border is optional*/
+  border-bottom:1px solid #444; 
+  cursor: pointer;
+}
+
+
+.fontsizecustomnew{
+  font-size: 11px;
+}
+
+
+
+
+
+#tablebol {
+  border:rgb(77, 20, 140) solid 1px !important;
+  }
+
+.styleforbol{
+  border: rgb(77, 20, 140) solid 1px !important;
+
+  }
+.orange{
+  color: rgb(255, 102, 0);
+  border: rgb(255, 102, 0) solid 2px !important;
+}
+.boldstyle{
+  font-weight: bold
+}
+
+
+.customfont{
+  font-size: 14px;
+}
+
+.fullwidth{
+  width: 100%;
+}
+
+
+
+.nav-pills > li > a.active {
+  background-color: #27034c!important;
+  color:white;
+}
+
+.whitecolor{
+  color:white;
+
+}
+
+
+
+.fontsizecustom{
+  font-size: 14px;
+}
+
+
+.vl {
+  border-left: 2px solid green;
+  height: 28px;
+  position: relative;
+ 
+  margin-left: 20px;
+ 
+}
+.vt {
+  border-left: 2px solid white;
+  height: 40px;
+  position: relative;
+ 
+  margin-left: 20px;
+ 
+}
+.vs {
+  border-left: 2px solid white;
+  height: 25px;
+  position: relative;
+ 
+  margin-left: 20px;
+ 
+}
+.vm {
+  border-left: 2px solid white;
+  height: 30px;
+  position: relative;
+ 
+  margin-left: 20px;
+ 
+}
+
+.b {
+  margin-left: 10px;
+ 
+}
+
+
+.imageprop{
+height:22px;
+width:22px;
+}
+
+.marginleftcustom{
+  margin-left: 20px;
+}
+
+
+.buttonLink {
+  background:none!important;
+  color:inherit;
+  border:none; 
+  padding:0!important;
+  font: inherit;
+  /*border is optional*/
+  border-bottom:1px solid #444; 
+  cursor: pointer;
+}
+
+
+.black{
+  color: black;
+}
+
+.marginfortxData{
+  margin-left: 5px;
+}
+
+.fontclassbold{
+  font-weight: bold;
+}
+
+.adminBtn{
+  background-color: white;
+  color: black;
+  width: 100%;
+}
+
+.customBackground{
+  background-color:#27034c;
+  color:white;
+ 
+}
+
+.customHeight{
+  height: 20px;;
+}
+
+.customRowHeight{
+  line-height:1px;
+}
+
+#boltable tr{
+  line-height:12px;
+}
+
+.orangebg{
+  background-color: rgb(255, 102, 0);
+  color: white;
+}
+
+
+
+.loader {
+  border: 16px solid #4d148c; /* Light grey */
+  border-top: 16px solid whitesmoke; /* violet */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

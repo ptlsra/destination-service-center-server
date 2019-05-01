@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>FedExServiceCenter</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="assets/css/best-carousel-slide.css">
+    <link rel="stylesheet" href="assets/css/Customizable-Background--Overlay.css">
+    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="assets/DataTables/datatables.min.css"/>
+
+</head>
+
+<body class="changebodycolor">
+<nav class="navbar navbar-expand-lg bg-light navbar-light bg-color-navheader">
+  <a class="navbar-brand" id="titlenav">
+    <img src="assets/img/fedexIcon.png" alt="FeEx" height="40px;">
+    </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"  aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12" id="content-heading" style="color:white;">
+            <br>
+            FedEx Road Driver Services 
+            
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+
+
+<div class ="container" style="background:white;color:black;font-size:11px;" >
+    <br>
+    <button  id="bolclick" class="btn btn-block">Print BOL</button>
+
+    <table class="table"  id="boltable">
+            <br>
+            <tbody>
+              <tr>
+                <td class="styleforbol"rowspan="4">
+                  <img src="assets/img/fedex-freight-4.png" height="80px" width="80px">
+                </td>
+              
+               </tr>
+               <tr>
+                <td  class="styleforbol boldstyle" colspan="3">Date	</td>
+                <td class="styleforbol fontclassbold" colspan="3" id="pickupDate" ></td>
+                <td  class="styleforbol boldstyle" colspan="3">PurchaseOrder</td>
+                <td class="styleforbol fontclassbold" colspan="3" id="purchaseOrder"></td>
+              </tr>
+              <tr>
+                <td  class="styleforbol boldstyle" colspan="3">Shipper </td>
+                <td  class="styleforbol fontclassbold" colspan="3" id="shipperName"></td>
+                <td  class="styleforbol boldstyle"  colspan="3">Shipper</td>
+                <td class="styleforbol" colspan="3"></td>
+              </tr>
+              <tr >
+                  <td class="orange boldstyle" colspan="6"> REQUIRED: Please select a service type
+                    <br>FedEx Freight Priority
+                    <br>FedEx Freight Economy
+                    </td>
+                  <td  class="styleforbol boldstyle" colspan="6">OPTIONAL: You may select a money-back guarantee
+                    <br>delivery (charges and tariff limitations may apply).
+                    <br>A.M. Delivery  Close of Business Delivery
+
+                  </td>
+                </tr>
+                <tr style="line-height:1px;">
+                        <td class="styleforbol customBackground" colspan="6"> SHIPPER (from)	 Please provide ZIP codes and phone numbers. 	
+                    
+                      </td>
+                      <td class="styleforbol customBackground" colspan="6"> CONSIGNEE (to) 	
+                         
+                        </td>
+                  
+                  </tr>
+
+                  <tr>
+                        <td class="styleforbol " > Shipper</td>
+                          <td colspan="2" class="styleforbol fontclassbold" id="shipperName2"></td>
+                          <td class="styleforbol" > FXF Acct. #</td>
+                          <td colspan="2" class="styleforbol fontclassbold" id="shipperAccountNo"></td>
+
+                          <td class="styleforbol "> Consignee	</td>
+                          <td colspan="2" class="styleforbol fontclassbold" id="consigneeName"></td>
+                          <td class="styleforbol"> FXF Acct. #</td>
+                          <td colspan="2" class="styleforbol fontclassbold" id="consigneeAccountNo"></td>
+                      </tr>
+
+                      <tr>
+                            <td class="styleforbol " > Attn. to</td>
+                              <td class="styleforbol fontclassbold">Shipper</td>
+                              <td class="styleforbol "> Area Code</td>
+                              <td class="styleforbol"></td>
+
+                              <td class="styleforbol " > Phone Number</td>
+                              <td class="styleforbol fontclassbold" id="shipperPhoneNo"></td>
+
+                              <td class="styleforbol " > Attn. to</td>
+                              <td class="styleforbol fontclassbold">Consignee</td>
+                              <td class="styleforbol "> Area Code</td>
+                              <td class="styleforbol"></td>
+
+                              <td class="styleforbol "> Phone Number</td>
+                              <td class="styleforbol fontclassbold" id="consigneePhoneNo"></td>
+                          </tr>
+
+                        <tr>
+                                <td class="styleforbol " > Address</td>
+                                  <td colspan="5" class="styleforbol fontclassbold" id="sourceAddress"></td>
+                                  <td class="styleforbol" >Address</td>
+                                  <td colspan="5" class="styleforbol fontclassbold" id="destinationAddress"></td>
+
+                              </tr>
+                        <tr>
+                            <td class="styleforbol " > Address (Store, Dept., Ste., Flr., Apt., Div.)</td>
+                            <td colspan="5" class="styleforbol" ></td>
+                            <td class="styleforbol" >Address (Store, Dept., Ste., Flr., Apt., Div.)</td>
+                            <td colspan="5" class="styleforbol" ></td>
+
+                        </tr>  
+
+                        <tr>
+                            <td class="styleforbol " > Address</td>
+                            <td colspan="5" class="styleforbol" ></td>
+                            <td class="styleforbol" >Address</td>
+                            <td colspan="5" class="styleforbol" ></td>
+
+                        </tr> 
+                        <tr>
+                                <td class="styleforbol " > State/Province</td>
+                                <td  class="styleforbol fontclassbold" id="consignorState" ></td>
+                                <td class="styleforbol " > ZIP/Postal Code	</td>
+                                <td  class="styleforbol fontclassbold" id="consignorZipCode"></td>                                    
+                                <td class="styleforbol" >Country</td>
+                                <td  class="styleforbol fontclassbold" id="consignorCountry"></td>
+
+                                <td class="styleforbol " > State/Province</td>
+                                <td  class="styleforbol fontclassbold" id="consigneeState" ></td>
+                                <td class="styleforbol " > ZIP/Postal Code	</td>
+                                <td  class="styleforbol fontclassbold" id="consigneeZipCode"></td>                                    
+                                <td class="styleforbol" >Country</td>
+                                <td  class="styleforbol fontclassbold" id="consigneeCountry"></td>
+
+                            </tr> 
+
+                            <tr>
+                                    <td class="styleforbol " colspan="6" > Optional or Additional Service Fees and Charges  Liftgate  Inside Pickup  Limited Access</td>
+                                   
+                                    <td class="styleforbol" colspan="6">Optional or Additional Service Fees and Charges  Liftgate  Inside Pickup  Limited Access</td>
+                                  
+    
+                                </tr> 
+
+                                <tr>
+                                        <td class="styleforbol " colspan="5" >Shipper Bill of Lading #</td>
+                                        <td class="styleforbol fontclassbold" id="bolId"></td>
+
+                                        <td class="styleforbol" colspan="2"> Custom Delivery Window:</td>
+                                        <td class="styleforbol fontclassbold" id="deliveryWindow" colspan="4"></td>
+                                      
+        
+                                    </tr> 
+                                    <tr class="customRowHeight">
+                                        <td class="styleforbol " colspan="12" >Special Instructions</td>
+                                           
+                                          
+            
+                                 </tr>                                                                             
+                            
+                                 <tr style="line-height:1px;">
+                                <td class="styleforbol customBackground" colspan="12">BILL FREIGHT CHARGES TO (if different than above):</td>
+                                 </tr>   
+                                 
+                                 <tr>
+                                        <td class="styleforbol " colspan="4" >Name	</td>
+                                       
+                                        <td class="styleforbol" colspan="4">FXF Acct. #	</td>
+                                        <td class="styleforbol" colspan="4">Mailing Address	</td>
+
+                                      
+        
+                                    </tr> 
+
+                                    <tr>
+                                            <td class="styleforbol " colspan="4" >City	</td>
+                                           
+                                            <td class="styleforbol" >State</td>
+                                            <td class="styleforbol" colspan="3">ZIP/Postal Code	</td>
+                                            <td class="styleforbol">Country	</td>
+                                            <td class="styleforbol">Area Code</td>
+                                            <td class="styleforbol" colspan="2">Phone Number</td>
+
+
+                                          
+            
+                                        </tr>                                         
+                                    <tr >
+                                            <td class="orange boldstyle" > Freight charges are PREPAID unless
+                                                   <br> marked collect.
+                                                   <br> CHECK BOX IF COLLECT 
+                                             
+                                                  </td>
+                                                <td  class="orange boldstyle" colspan="11">
+                                                         USD <span style="margin-left:120px;">1.	 The letters “C.O.D.” must appear in box before consignee’s name above.</span>
+                                                       <br>  CAD <span style="margin-left:10px;">C.O.D.</span> <span style="margin-left:72px;">2.	 C.O.D. funds to be collected as:  Certified Funds  Company Check Shipper</span>
+                                                        Consignee
+                                                           
+                                                        Personal Check
+                                                       <br> <span style="margin-left:40px;">_____________</span><span style="margin-left:45px;">3.	 C.O.D. fee to be paid by:  Shipper  Consignee</span>
+                                                       
+                                                       <br> <span style="margin-left:50px;">AMOUNT</span>
+                                                        
+                                                        
+                                                       
+                                                        
+                                                        
+                                               
+                            
+                                                </td>
+                                              </tr>
+
+                                              <tr style="line-height:1px;">
+                                                    <td class="styleforbol customBackground" colspan="12" >REMIT C.O.D. TO (if different than shipper above):</td>
+                                                       
+                                                      
+                        
+                                             </tr>  
+                                             <tr>
+                                                    <td class="styleforbol " colspan="6" >Name</td>
+                                                    <td class="styleforbol " colspan="6" >Mailing Address</td>
+
+                        
+                                             </tr>  
+
+                                             <tr>
+                                                    <td class="styleforbol " colspan="4" >City	</td>
+                                                   
+                                                    <td class="styleforbol" >State</td>
+                                                    <td class="styleforbol" colspan="3">ZIP/Postal Code	</td>
+                                                    <td class="styleforbol">Country	</td>
+                                                    <td class="styleforbol">Area Code</td>
+                                                    <td class="styleforbol" colspan="2">Phone Number</td>
+    
+        
+                                                  
+                    
+                                                </tr>    
+                                               
+                                             <tr class="customBackground" >
+                                                    <td class="styleforbol " >HANDLING UNITS (H/U).	</td>
+                                                   
+                                                    <td class="styleforbol" >H/U PKG TYPE</td>
+                                                    <td class="styleforbol" >PIECES	</td>
+                                                    <td class="styleforbol">HM(X)	</td>
+                                                    <td class="styleforbol" colspan="4">KIND OF PACKAGE, DESCRIPTION OF ARTICLES, SPECIAL MARKS AND EXCEPTIONS</td>
+                                                    <td class="styleforbol" >WEIGHT IN LBS</td>
+                                                    <td class="styleforbol" >NMFC ITEM #</td>
+                                                    <td class="styleforbol" >CLASS</td>
+                                                    <td class="styleforbol" >CUBE</td>
+
+        
+                                                  
+                    
+                                                </tr>    
+
+                                                           <tr  >
+                                                        <td class="styleforbol fontclassbold" id="handlingUnit">	</td>
+                                                       
+                                                        <td class="styleforbol fontclassbold" id="pkgType"></td>
+                                                        <td class="styleforbol fontclassbold" id="pieces"></td>
+                                                        <td class="styleforbol fontclassbold" ></td>
+                                                        <td class="styleforbol fontclassbold" id="packageDescription" colspan="4"></td>
+                                                        <td class="styleforbol fontclassbold" id="weight"></td>
+                                                        <td class="styleforbol fontclassbold" id="nmfcItemNo"></td>
+                                                        <td class="styleforbol fontclassbold" id="classification"></td>
+                                                        <td class="styleforbol" ></td>
+
+            
+                                                      
+                        
+                                                    </tr>    
+                                                    <tr  >
+                                                            <td class="styleforbol " >	</td>
+                                                           
+                                                            <td class="styleforbol" ></td>
+                                                            <td class="styleforbol" >	</td>
+                                                            <td class="styleforbol">	</td>
+                                                            <td class="styleforbol" colspan="4"></td>
+                                                            <td class="styleforbol" ></td>
+                                                            <td class="styleforbol" ></td>
+                                                            <td class="styleforbol" ></td>
+                                                            <td class="styleforbol" ></td>
+    
+                
+                                                          
+                            
+                                                        </tr>    
+                                                        <tr  >
+                                                                <td class="styleforbol " >	</td>
+                                                               
+                                                                <td class="styleforbol" ></td>
+                                                                <td class="styleforbol" >	</td>
+                                                                <td class="styleforbol">	</td>
+                                                                <td class="styleforbol" colspan="4"></td>
+                                                                <td class="styleforbol" ></td>
+                                                                <td class="styleforbol" ></td>
+                                                                <td class="styleforbol" ></td>
+                                                                <td class="styleforbol" ></td>
+        
+                    
+                                                              
+                                
+                                                            </tr>    
+                                                            <tr  >
+                                                                    <td class="styleforbol " >TOTAL H/U:	</td>
+                                                                    <td class="orangebg" colspan="11">MARK “X” OR “RQ” IN THE HM COLUMN TO DESIGNATE HAZARDOUS MATERIALS OR REPORTABLE QUANTITY AS DEFINED IN DOT REGULATIONS.</td>
+                                                                    </tr>
+                                                            <tr  >
+                                                                    <td class="orange" colspan="6" >HM EMERGENCY CONTACT PHONE NUMBER (_______) ______________________
+                                                                        <br>CUSTOMER REGISTERED W/EMERGENCY RESPONSE INFO. PROVIDER or CONTRACT #
+                                                                    </td>
+                                                                    <td class="styleforbol" colspan="6">
+                                                                            FOR INTERNATIONAL SHIPMENTS INDICATE BROKER NAME, FAX AND PHONE NUMBERS.
+                                                                            <br>EEI/SED Number or Exception_____________________________ Phone # (_______) ________________
+                                                                            <br>Broker Name__________________________________________ Fax # (_______) 
+                                                                        </td>
+                                                            </tr>
+
+                                                            <tr  >
+                                                                    <td class="styleforbol" >Consignor Signature</td>
+                                                                    <td class="styleforbol fontclassbold" id="shipperSignature"></td>
+
+                                                                    <td class="styleforbol">Shipper Signature</td>
+                                                                    <td class="styleforbol fontclassbold" id="shipperSignature2"></td>
+
+                                                                    <td class="styleforbol" >Date</td>
+                                                                    <td class="styleforbol fontclassbold" id="dateValue"></td>
+
+                                                                    <td class="styleforbol">Driver Employee Number</td>
+                                                                    <td class="styleforbol fontclassbold" id="cityDriverId"></td>
+
+                                                                    <td class="styleforbol">Date</td>
+                                                                    <td class="styleforbol fontclassbold" id="dateValue2"></td>
+
+                                                                    <td class="styleforbol" >Trailer #</td>
+                                                                    <td class="styleforbol fontclassbold" id="trailerNo"></td>
+
+
+                                                            </tr>
+                                                                     
+
+                                                                    
+                                  
+
+            </tbody>
+          </table>
+         <br>
+
+ </div>
+ 
+
+
+
+        
+    
+    
+    
+    
+   
+    
+        
+    
+
+<br>
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/DataTables/datatables.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>  
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>  
+    <script src="assets/js/bolDetail.js"></script>
+
+    <script src="assets/js/printBOL.js"></script>
+
+    
+
+ 
+   
+
+
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+#custom-navbar {
+  background: linear-gradient(-90deg, #0f5e4f, #033b30,#0a897e);
+}
+
+#custom-menubar-content {
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#custom-menubar-brandname {
+  /*background: inherit;*/
+  color: white;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+#custom-menubar-content-wrap {
+  text-align: right;
+  margin-left: 330px;
+  position: absolute;
+}
+
+#footer-custom {
+  height: 50px;
+  background-color: linear-gradient(-90deg, #0f5e4f, #033b30,#0a897e);
+}
+
+bg-header {
+  background: linear-gradient(-90deg, #0f5e4f, #033b30,#0a897e);
+}
+
+#tablebol {
+  border:rgb(77, 20, 140) solid 1px !important;
+  }
+
+.styleforbol{
+  border: rgb(77, 20, 140) solid 1px !important;
+
+  }
+.orange{
+  color: rgb(255, 102, 0);
+  border: rgb(255, 102, 0) solid 2px !important;
+}
+.boldstyle{
+  font-weight: bold
+}
+
+
+.customfont{
+  font-size: 14px;
+}
+
+.fullwidth{
+  width: 100%;
+}
+
+
+
+.nav-pills > li > a.active {
+  background-color: #27034c!important;
+  color:white;
+}
+
+.whitecolor{
+  color:white;
+
+}
+
+
+
+.fontsizecustom{
+  font-size: 14px;
+}
+
+
+.vl {
+  border-left: 2px solid green;
+  height: 28px;
+  position: relative;
+ 
+  margin-left: 20px;
+ 
+}
+.vt {
+  border-left: 2px solid white;
+  height: 40px;
+  position: relative;
+ 
+  margin-left: 20px;
+ 
+}
+.vs {
+  border-left: 2px solid white;
+  height: 25px;
+  position: relative;
+ 
+  margin-left: 20px;
+ 
+}
+.vm {
+  border-left: 2px solid white;
+  height: 30px;
+  position: relative;
+ 
+  margin-left: 20px;
+ 
+}
+
+.b {
+  margin-left: 10px;
+ 
+}
+
+
+.imageprop{
+height:22px;
+width:22px;
+}
+
+.marginleftcustom{
+  margin-left: 20px;
+}
+
+
+.buttonLink {
+  background:none!important;
+  color:inherit;
+  border:none; 
+  padding:0!important;
+  font: inherit;
+  /*border is optional*/
+  border-bottom:1px solid #444; 
+  cursor: pointer;
+}
+
+
+.black{
+  color: black;
+}
+
+.marginfortxData{
+  margin-left: 5px;
+}
+
+.fontclassbold{
+  font-weight: bold;
+}
+
+.adminBtn{
+  background-color: white;
+  color: black;
+  width: 100%;
+}
+
+.customBackground{
+  background-color:#27034c;
+  color:white;
+ 
+}
+
+.customHeight{
+  height: 20px;;
+}
+
+.customRowHeight{
+  line-height:1px;
+}
+
+#boltable tr{
+  line-height:12px;
+}
+
+.orangebg{
+  background-color: rgb(255, 102, 0);
+  color: white;
+}
+
+
+
+.loader {
+  border: 16px solid #4d148c; /* Light grey */
+  border-top: 16px solid white; /* violet */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

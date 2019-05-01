@@ -1,0 +1,371 @@
+div.jumbotron.carousel-hero {
+  color: #fff;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  padding-top: 60px;
+  padding-bottom: 100px;
+  margin-bottom: 0;
+  object-fit: contain;
+}
+
+h1.hero-title, h2.hero-title, h3.hero-title {
+  text-shadow: 0 3px 3px rgba(0,0,0,0.6);
+  color: white;
+  font-weight: bolder;
+}
+
+p.hero-subtitle {
+  max-width: 700px;
+  margin: 25px auto;
+  padding: 10px 15px;
+  color: #fff;
+  display: none;
+  text-shadow: 0 3px 3px rgba(0,0,0,0.6);
+}
+
+.plat {
+  border-radius: 0px;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+  box-shadow: 0 0 0 0 #048f83!important;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #016090;
+  border-color: #016090;
+}
+
+.btn.btn-primary {
+  background-color: #048f83!important;
+  border-color: #048f83!important;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+  box-shadow: 0 0 0 .2rem rgba(0,123,255,.5);
+}
+
+* {
+  /*box-sizing: inherit;*/
+}
+
+*:before, *:after {
+  /*box-sizing: inherit;*/
+}
+
+span {
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+#second-subtitle {
+  display: none;
+}
+
+.hero-subtitle {
+  display: none;
+}
+
+#content-heading {
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Gill Sans", sans-serif;
+  margin-bottom: 20px;
+}
+
+inner-content-port {
+  color: black;
+}
+
+#header-button-one {
+  display: none;
+}
+
+#header-button-three {
+  display: none;
+}
+
+.sub-inner-title {
+  text-align: left;
+  font-size: 22px;
+  border-bottom: 2px solid white;
+}
+
+.sub-inner-title-content {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sidenav {
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  font-size: 18px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  display: block;
+  color: #68AB8F;
+}
+
+div.jumbotron.carousel-hero {
+  color: #fff;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  padding-top: 60px;
+  padding-bottom: 100px;
+  margin-bottom: 0;
+}
+
+div.jumbotron.hero-nature {
+  background-image: url('../../assets/img/fedexbanner8.jpg');
+  height: 200px;
+}
+
+div.jumbotron.hero-photography {
+  background-image: url('../../assets/img/fedexbanner12.png');
+  height: 200px;
+}
+
+div.jumbotron.hero-technology {
+  background-image: url('../../assets/img/fedexbanner1.png');
+  height: 200px;
+}
+
+h1.hero-title, h2.hero-title, h3.hero-title {
+  text-shadow: 0 3px 3px rgba(0,0,0,0.6);
+  color: white;
+  font-weight: bolder;
+}
+
+p.hero-subtitle {
+  max-width: 700px;
+  margin: 25px auto;
+  padding: 10px 15px;
+  color: #fff;
+  display: none;
+  text-shadow: 0 3px 3px rgba(0,0,0,0.6);
+}
+
+.plat {
+  border-radius: 0px;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+  box-shadow: 0 0 0 0 #048f83!important;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #016090;
+  border-color: #016090;
+}
+
+.btn.btn-primary {
+  background-color: #4d148c!important;
+  border-color: #4d148c!important;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+  box-shadow: 0 0 0 .2rem rgba(0,123,255,.5);
+}
+
+* {
+}
+
+*:before, *:after {
+}
+
+span {
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+#second-subtitle {
+  display: none;
+}
+
+.hero-subtitle {
+  display: none;
+}
+
+#content-heading {
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Gill Sans", sans-serif;
+  margin-bottom: 20px;
+}
+
+inner-content-port {
+  color: black;
+}
+
+#header-button-one {
+  display: none;
+}
+
+#header-button-three {
+  display: none;
+}
+
+.sub-inner-title {
+  text-align: left;
+  font-size: 22px;
+  /*border-bottom: 2px solid white;*/
+}
+
+.sub-inner-title-content {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sidenav {
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  display: block;
+  color: white;
+  font-family: "Gill Sans", sans-serif;
+}
+
+.sidenav a:hover {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  display: block;
+  color: white;
+  background-color: #26044a;
+}
+
+.bg-color-navheader {
+  background: linear-gradient(-90deg, #ffffff, #fffefe,#f7f6f6);
+  color: black;
+}
+
+.color-brandnew {
+  color: white;
+}
+
+#titlenav {
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+.whitecolor {
+  color: white;
+}
+
+#ulnav {
+  float: right;
+  right: 40px;
+}
+
+#whitecolordata {
+  color: white;
+  padding: px;
+}
+
+#whitecolordatanew {
+  color: white;
+}
+
+#whitecolordatathree {
+  color: white;
+}
+
+#whitecolordatafour {
+  color: white;
+}
+
+div {
+}
+
+#myTable {
+  max-height: 200px;
+}
+
+#heronature {
+  display: none;
+}
+
+#heronaturesubtitle {
+  display: none;
+}
+
+#herotitleslidetwo {
+  display: none;
+}
+
+.exporterPortBanner {
+  background-image: url("../../assets/img/warehouse2.jpg");
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#loginForm {
+  height: 300px;
+  width: 350px;
+  margin-top: 100px;
+}
+
+#loginForm2 {
+  height: 300px;
+  width: 350px;
+  margin-top: -300px;
+  margin-left: 60px;
+}
+
+#forgotLink {
+  display: none;
+}
+
+#hidePasswordField {
+  display: none;
+}
+
+.blackcolor {
+  color: black;
+}
+
+.changebodycolor {
+  background-color: #430d7c;
+  color: white;
+}
+
+.red .active a, .red .active a:hover {
+  background-color: red;
+}
+
+.linkcolor {
+  color: white;
+}
+
+
+
+.vline {
+  border-left: 5px solid rgb(77, 20, 140);;
+  height: 400px;
+}

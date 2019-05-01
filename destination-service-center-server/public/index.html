@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>FedExServiceCenter</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="assets/css/best-carousel-slide.css">
+    <link rel="stylesheet" href="assets/css/Customizable-Background--Overlay.css">
+    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="background-color:#f8f7f6;">
+<nav class="navbar navbar-expand-lg bg-light navbar-light bg-color-navheader">
+  <a class="navbar-brand" id="titlenav">
+     <img src="assets/img/fedexIcon.png" alt="FeEx" height="40px;">
+    </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"  aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+ 
+    
+</nav>
+   
+
+    <!--
+    <div class="exporterPortBanner" style="color:rgb(0,106,213);height:570px;">
+        <div class="d-flex justify-content-center align-items-center" style="min-height:initial;width:100%;position:absolute;left:0;background-color:rgba(0,0,0,0.53);height:inherit;">
+            <form method="post" id="loginForm">
+                <h2 class="sr-only">Login Form</h2>
+                <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+                <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div><a href="#" id="forgotLink" class="forgot">Forgot your email or password?</a></form>
+        </div>
+    </div>
+    !-->
+
+    <div class="" style="margin-top:10%;height:570px;background-color:#f8f7f6">
+        <div class="row">
+            <div class="col-sm-2" >
+              </div>
+
+            <div class="col-sm-3">
+
+                    <form method="post" id="loginForm" style="margin-right:20px;" action="">
+                    <h6 style="color:black">Login As Driver</h6>
+                    <div class="form-group"><input class="form-control" type="email"  id="driverEmail" name="driverEmail" placeholder="Email"></div>
+                    <div class="form-group"><input class="form-control" type="password" id="driverPassword" name="driverPassword" placeholder="Password"></div>
+                    <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div>
+                   <a href="#registerDriver" data-toggle="modal" style="color:black;">Not registered yet? Click here to register.</a>
+
+                  </form>
+
+            </div>
+
+            <div class="col-sm-1" >
+               
+              </div>
+
+            <div class="col-sm-3" >
+                <div class="vline"></div> 
+                <form method="post" id="loginForm2" action="">
+                    <h6 style="color:black">Login As Admin</h6>
+                    <div class="form-group"><input class="form-control" type="text" name="email" id="email" placeholder="UserName"></div>
+                    <div class="form-group"><input class="form-control" type="password" name="password" id="password" placeholder="Password"></div>
+                    <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div>
+
+</form>
+            </div>
+
+            <div class="col-sm-3">
+
+
+
+              </div>
+          </div>
+</div>
+
+
+
+
+<div class="modal fade" id="registerDriver">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h6 class="modal-title">Please enter following details to register as driver</h6>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        <form id="registerdriverform" action='' method='post'>
+
+            <table class="table table-bordered">
+              <tr>
+                <td>First Name</td>
+                <td><input type="text" class="fullwidth" placeholder="Enter FirstName of Driver" required  id="driverFirstName" name="driverFirstName"></td>
+                </tr>
+
+                <tr>
+                    <td>Last Name</td>
+                    <td><input type="text" class="fullwidth" placeholder="Enter Last Name of Driver" required  id="driverLastName" name="driverLastName"></td>
+                    </tr>
+
+                <tr>
+                    <td>Email ID</td>
+                    <td><input type="email" class="fullwidth" placeholder="Enter Email ID of Driver" required  id="driverEmailId" name="driverEmailId"></td>
+                </tr>
+
+
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" class="fullwidth" placeholder="Enter Password" required  id="driverPasswordValue" name="driverPasswordValue"></td>
+                </tr>
+
+                <tr>
+                    <td>Select Driver type</td>
+                    <td> <select name="driverType" id="driverType" class="fullwidth">
+                        <option value="city">City Driver</option>
+                        <option value="road">Road Driver</option>
+                      </select> </td>
+                </tr>
+
+
+              </table>
+  <input type="submit" value="Submit Details" class="btn btn-primary btn-block" >
+          </form>
+        </div>
+        
+      
+      </div>
+    </div>
+  </div>
+
+
+
+
+<div class="modal fade" id="pending">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h6 class="modal-title">Processing Request</h6>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+    <img src="assets/img/loading.gif" height="100px;" width="100px;" style="margin-left:40%;">
+        </div>
+        
+      
+      </div>
+    </div>
+  </div>
+    
+
+
+
+
+<div class="modal fade" id="success">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h6 class="modal-title">Transaction Successfully sent to Orderer with TXID:</h6>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+<p id="txHashstatus"></p>
+        </div>
+        
+      
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="txFail">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h6 class="modal-title">Transaction Successfully sent to Orderer with TXID:</h6>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+  <p id="txFailMessage"></p>
+          </div>
+          
+        
+        </div>
+      </div>
+    </div>
+    
+
+
+
+<div class="modal fade" id="credentialModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h6 class="modal-title">Credential Status:</h6>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+<p id="credentialStatus"></p>
+        </div>
+        
+      
+      </div>
+    </div>
+  </div>
+    <footer id="footer">
+    
+    <div id="footer-container">
+        <p id="footer-content">
+             <img src="assets/img/Logo.png">
+            Developed by BlockChain COE |Mphasis Ltd.</p>
+    </div>
+</footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+
+
+      $("form#registerdriverform").submit(function(e) {
+    e.preventDefault();
+
+    $('#registerDriver').modal('hide'); // hode register driver modal
+   // $('#pending').modal(); // hode register driver modal
+
+   var driverFirstName= $('#driverFirstName').val();
+   var driverLastName= $('#driverLastName').val();
+   var driverEmailId= $('#driverEmailId').val();
+   var driverPassword= $('#driverPasswordValue').val();
+   //alert(driverPassword)
+   var driverType= $('#driverType').val();
+   var data = {
+    
+	"firstName":driverFirstName,
+	"lastName":driverLastName,
+	"emailId":driverEmailId,
+	"password":driverPassword,
+	"driverType":driverType
+
+   };
+
+   $.ajax({
+   	
+       dataType:"json",
+       contentType: 'application/json; charset=UTF-8',
+      // url:"/requestBOL?assetId="+assetId,		
+      url:"/driver",	
+      data: JSON.stringify(data),
+       type:"POST",
+       global:false,
+       async:false, 
+       success: function(result){
+
+       // $('#pending').modal('hide'); // hide register driver modal
+        
+   //{"success":true,"message":"Successfully sent transaction to the orderer","txId":"701edbece36f5091a8dbc4ae6c5dbfdcf840cc754a7e3da42085a8f13fdce7e4"} 
+      
+        var txId=result.txId;
+        var success=result.success;
+
+        if(success==true){
+          document.getElementById("txHashstatus").innerHTML = txId; 
+       $('#success').modal(); // hode register driver modal
+
+    		   
+    		   setTimeout(function(){ 
+                   
+    	              window.location.href="index.html";
+    	              return false;
+    	           }, 2000);
+    		   			
+    	   
+    		   
+    	   }else{
+          document.getElementById("txFailMessage").innerHTML = 'Transaction has failed.Please try again later.'; 
+          $('#txFail').modal(); 
+
+            setTimeout(function(){ 
+                   
+                   window.location.href="index.html";
+                   return false;
+                }, 2000);
+          
+         }
+			
+
+        }
+		  
+			
+			
+           
+         
+    	
+    });
+});
+      </script>
+
+
+
+
+<script>
+
+  $("form#loginForm").submit(function(e) {
+    e.preventDefault();
+
+   
+   var driverEmail= $('#driverEmail').val();
+   var driverPassword= $('#driverPassword').val();
+  
+   //alert(driverPassword)
+   var data = {
+	"emailId":driverEmail,
+	"password":driverPassword
+   };
+
+//alert(JSON.stringify(data))
+   $.ajax({
+   	
+       dataType:"json",
+       contentType: 'application/json; charset=UTF-8',
+      // url:"/requestBOL?assetId="+assetId,		
+      url:"/driver/login",	
+      data: JSON.stringify(data),
+       type:"POST",
+       global:false,
+       async:false, 
+       success: function(result){
+
+//alert(JSON.stringify(result))
+        
+       
+        if(result.hasOwnProperty('message')){
+          document.getElementById("credentialStatus").innerHTML = 'Incorrect credentials. Please try again.'; 
+          $('#credentialModal').modal();
+
+          setTimeout(function(){ 
+                   
+                   window.location.href="index.html";
+                   return false;
+                }, 2000);
+
+        }else{
+          
+  
+          document.getElementById("credentialStatus").innerHTML = 'Welcome '+result.firstName+" "+result.lastName;
+
+          var driverType=result.driverType;
+          if(driverType=="city"){
+            localStorage.setItem("cityDriverId",result.driverId) 
+          localStorage.setItem("cityDriverType",result.driverType)
+          localStorage.setItem("cityDriverEmailId",result.emailId) 
+          localStorage.setItem("cityDriverFirstName",result.firstName) 
+          localStorage.setItem("cityDriverLastName",result.lastName) 
+          localStorage.setItem("cityDriverServiceCenterID",result.scId) 
+          $('#credentialModal').modal();
+
+        setTimeout(function(){ 
+         
+         window.location.href="citydriver.html?driverId="+result.driverId;
+         return false;
+      }, 2000);
+            
+          }
+
+           if(driverType=="road"){
+            localStorage.setItem("roadDriverId",result.driverId) 
+          localStorage.setItem("roadDriverType",result.driverType)
+          localStorage.setItem("roadDriverEmailId",result.emailId) 
+          localStorage.setItem("roadDriverFirstName",result.firstName) 
+          localStorage.setItem("roadDriverLastName",result.lastName) 
+          localStorage.setItem("roadDriverServiceCenterID",result.scId) 
+          $('#credentialModal').modal();
+
+        setTimeout(function(){ 
+         
+         window.location.href="roadDriver.html?driverId="+result.driverId;
+         return false;
+      }, 2000);
+            
+          }
+        
+
+         
+       
+
+
+        }
+       }
+      })
+
+  });
+
+</script>
+
+
+<script>
+
+
+   $("form#loginForm2").submit(function(e) {
+    e.preventDefault();
+
+  // alert('cliecked')
+   var email= $('#email').val();
+   var password= $('#password').val();
+  
+   var data = {
+	"userName":email,
+	"password":password
+   };
+
+//alert(JSON.stringify(data))
+   $.ajax({
+   	
+       dataType:"json",
+       contentType: 'application/json; charset=UTF-8',
+      // url:"/requestBOL?assetId="+assetId,		
+      url:"/admin/login",	
+      data: JSON.stringify(data),
+       type:"POST",
+       global:false,
+       async:false, 
+       success: function(result){
+
+       // alert(JSON.stringify(result))
+       
+        if(result.message=="success"){
+          document.getElementById("credentialStatus").innerHTML = 'Welcome  To Admin Dashboard';
+         
+         
+         
+          
+         $('#credentialModal').modal();
+
+         setTimeout(function(){ 
+                  
+                  window.location.href="admin.html";
+                  return false;
+               }, 2000);
+
+         
+
+        }else{
+          
+          document.getElementById("credentialStatus").innerHTML = 'Incorrect credentials. Please try again.'; 
+          $('#credentialModal').modal();
+
+          setTimeout(function(){ 
+                   
+                   window.location.href="index.html";
+                   return false;
+                }, 2000);
+       
+
+        }
+       }
+      })
+
+  });
+
+</script>
+
+</body>
+
+</html>

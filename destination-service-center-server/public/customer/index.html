@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>FedEx</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <div id="commonHeader"></div>
+
+
+<div class="jumbotron jumbotron-fluid" id="bannerImage">
+  <div class="container">
+    <h1 class="display-4" style="font-weight:bolder">FedEx Customer Portal</h1>
+    <p class="lead" style="font-weight:bolder">Welcome to FedEx customer portal secured by blockchain.</p>
+  </div>
+</div><div>
+    <h2 class="heading-middle">Available Services</h2>
+    <p style="text-align:center;">Create Shipments,Track Goods and View all Transactions using blockchain secured FedEx platform</p>
+</div>
+    <div></div><br>
+<br>
+<div class="container">
+
+<div class="row">
+  <div class="col-sm"></div>
+  <div class="col-sm">
+      <img src="assets/img/fedex1.jpeg" style="width:300px;height:180px;margin-bottom:15px;">
+      <br>
+      <h5 class="fontbold">Ship Goods</h5>
+            <p>Sending Consignments made easy.Click Here to Create a Shipment.</p>
+
+    </div>
+  <div class="col-sm">
+     <img src="assets/img/fedextruck2.jpg" style="width:300px;height:180px;margin-bottom:15px;">
+      <h5 class="fontbold">Track Shipment</h5>
+      
+        <p>Get real time status of shipments.Click here to view shipments</p>
+
+      <p></p>
+    </div>
+  <div class="col-sm">
+      <img src="assets/img/tx.jpg" style="width:300px;height:180px;margin-bottom:15px;">
+      <h5 class="fontbold">View Transactions</h5>
+        <p>Comprehensive list of all your transactions.Click Here to View.</p>
+
+    </div>
+  <div class="col-sm">
+    </div>
+
+</div>
+</div>
+
+
+
+<div class="modal fade" id="registerCustomerModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h6 class="modal-title">Please enter following details to register as Fedex customer</h6>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        <form id="registercustomerform" action='' method='post'>
+
+            <table class="table table-bordered">
+              <tr>
+                <td>First Name</td>
+                <td><input type="text" class="fullwidth" placeholder="Enter FirstName of Customer" required  id="customerFirstName" name="customerFirstName"></td>
+                </tr>
+
+                <tr>
+                    <td>Last Name</td>
+                    <td><input type="text" class="fullwidth" placeholder="Enter Last Name of Customer" required  id="customerLastName" name="customerLastName"></td>
+                    </tr>
+
+                <tr>
+                    <td>Email ID</td>
+                    <td><input type="email" class="fullwidth" placeholder="Enter Email ID " required  id="customerEmailId" name="customerEmailId"></td>
+                </tr>
+
+
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" class="fullwidth" placeholder="Enter Password" required  id="customerPassword" name="customerPassword"></td>
+                </tr>
+
+                <tr>
+                    <td>Phone Number</td>
+                    <td><input type="number" class="fullwidth" placeholder="Enter Phone Number" required  id="customerPhoneno" name="customerPhoneno"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Address</td>
+                        <td><input type="text" class="fullwidth" placeholder="Enter Address" required  id="customerAddress" name="customerAddress"></td>
+                        </tr>
+
+                        <tr>
+                            <td>City</td>
+                            <td><input type="text" class="fullwidth" placeholder="Enter City" required  id="city" name="city"></td>
+                            </tr>
+
+                        <tr>
+                            <td>State</td>
+                            <td><input type="text" class="fullwidth" placeholder="Enter State" required  id="state" name="state"></td>
+                            </tr>
+
+
+                        <tr>
+                            <td>Country</td>
+                            <td><input type="text" class="fullwidth" placeholder="Enter Country" required  id="country" name="country"></td>
+                            </tr>
+
+
+                        <tr>
+                            <td>Zipcode</td>
+                            <td><input type="text" class="fullwidth" placeholder="Enter Zipcode" required  id="zipcode" name="zipcode"></td>
+                            </tr>
+
+
+
+              </table>
+  <input type="submit" value="Submit Details" class="btn btn-primary btn-block" >
+          </form>
+        </div>
+        
+      
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!--Login Modal -->
+
+
+<div class="modal fade" id="loginModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h6 class="modal-title">Please enter following details to login as Fedex customer</h6>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        <form id="loginModalForm" action='' method='post'>
+
+            <table class="table table-bordered">
+           
+                 
+
+                <tr>
+                    <td>Email ID</td>
+                    <td><input type="email" class="fullwidth" placeholder="Enter Email ID" required  id="emailId" name="emailId"></td>
+                </tr>
+
+
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" class="fullwidth" placeholder="Enter Password" required  id="password" name="password"></td>
+                </tr>
+
+              
+
+           
+
+
+
+              </table>
+  <input type="submit" value="Submit Details" class="btn btn-primary btn-block" >
+          </form>
+        </div>
+        
+      
+      </div>
+    </div>
+  </div>
+
+
+
+<div class="modal fade" id="pending">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h6 class="modal-title">Processing Request</h6>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+    <img src="assets/img/loading.gif" height="100px;" width="100px;" style="margin-left:40%;">
+        </div>
+        
+      
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="logoutModal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h6 class="modal-title">Please wait while you are logged out</h6>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+      <img src="assets/img/loading.gif" height="100px;" width="100px;" style="margin-left:40%;">
+          </div>
+          
+        
+        </div>
+      </div>
+    </div>
+
+
+
+<div class="modal fade" id="profileModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h6 class="modal-title" id="profileModalTitle">Profile Details</h6>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <table class="table table-bordered">
+            <tr>
+              <td>FirstName</td>
+                <td id="FedexCustomerFirstName" class="fontclassbold"></td>
+              </tr>
+
+
+              <tr>
+                  <td>LastName</td>
+                    <td id="FedexCustomerLastName" class="fontclassbold"></td>
+                  </tr>
+                  <tr>
+                      <td>Customer ID</td>
+                        <td id="FedexCustomerID" class="fontclassbold"></td>
+                      </tr>
+
+                      <tr>
+                          <td>Phone Number</td>
+                            <td id="FedexCustomerPhoneNumber" class="fontclassbold"></td>
+                          </tr>
+
+                          <tr>
+                              <td>Email ID</td>
+                                <td id="FedexCustomerEmailID" class="fontclassbold"></td>
+                              </tr>
+            </table>
+        </div>
+        
+      
+      </div>
+    </div>
+  </div>
+  
+
+
+<div class="modal fade" id="success">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h6 class="modal-title">Transaction Successfully sent to Orderer with TXID:</h6>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+<p id="txHashstatus"></p>
+        </div>
+        
+      
+      </div>
+    </div>
+  </div>
+    
+
+
+
+  <div class="modal fade" id="txFail">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h6 class="modal-title">Transaction Successfully sent to Orderer with TXID:</h6>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+  <p id="txFailMessage"></p>
+          </div>
+          
+        
+        </div>
+      </div>
+    </div>
+    
+
+            <!-- Credential Status -->
+            <div class="modal fade" id="credentialModal">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                  
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <h6 class="modal-title">Credential Status:</h6>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body">
+            <p id="credentialStatus"></p>
+                    </div>
+                    
+                  
+                  </div>
+                </div>
+              </div>
+<footer class="page-footer font-small footerstyle">
+
+   
+   
+    
+    
+    <div class="footer-copyright text-center py-3">Developed by BlockchainCOE
+    </div>
+   
+
+  </footer>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/commonHeader.js"></script>
+
+    <script src="assets/js/customerLogin.js"></script>
+    <script src="assets/js/customerLogout.js"></script>
+
+
+</body>
+
+<script>
+
+
+
+      $("form#registercustomerform").submit(function(e) {
+    e.preventDefault();
+
+    $('#registerCustomerModal').modal('hide'); // hode register driver modal
+    $('#pending').modal(); // hode register driver modal
+
+   var customerFirstName= $('#customerFirstName').val();
+   var customerLastName= $('#customerLastName').val();
+   var customerEmailId= $('#customerEmailId').val();
+   var customerPassword= $('#customerPassword').val();
+   var customerPhoneno= $('#customerPhoneno').val();
+   var customerAddress= $('#customerAddress').val();
+   var state= $('#state').val();
+   var zipcode= $('#zipcode').val();
+   var country= $('#country').val();
+
+   var city= $('#city').val();
+
+   var data = {
+    
+	"firstName":customerFirstName,
+	"lastName":customerLastName,
+	"emailId":customerEmailId,
+	"password":customerPassword,
+  "phoneNumber":customerPhoneno,
+  "address":customerAddress,
+  "zipCode":zipcode,
+  "state":state,
+  "country":country,
+  "city":city
+   };
+
+
+
+
+
+   $.ajax({
+   	
+       dataType:"json",
+       contentType: 'application/json; charset=UTF-8',
+      // url:"/requestBOL?assetId="+assetId,		
+      url:"/customer",	
+      data: JSON.stringify(data),
+       type:"POST",
+       global:false,
+       async:false, 
+       success: function(result){
+
+//alert(JSON.stringify(result))
+        $('#pending').modal('hide'); // hide register driver modal
+        
+   //{"success":true,"message":"Successfully sent transaction to the orderer","txId":"73b8022ab1702391921d16b1881c908bdab90fc2ea0928c6738ee16d2b853815"}
+      
+        var txId=result.txId;
+        var success=result.success;
+
+        if(success==true){
+          document.getElementById("txHashstatus").innerHTML = txId; 
+       $('#success').modal(); // hode register driver modal
+
+    		   
+    		   setTimeout(function(){ 
+                   
+    	              window.location.href="index.html";
+    	              return false;
+    	           }, 2000);
+    		   			
+    	   
+    		   
+    	   }else{
+          document.getElementById("txFailMessage").innerHTML = 'Transaction has failed.Please try again later.'; 
+          $('#txFail').modal(); 
+
+            setTimeout(function(){ 
+                   
+                   window.location.href="index.html";
+                   return false;
+                }, 2000);
+          
+         }
+			
+
+        }
+		  
+			
+			
+           
+         
+    	
+    });
+});
+
+  </script>
+
+
+
+<script>
+
+    $("form#loginModalForm").submit(function(e) {
+      e.preventDefault();
+      $('#loginModal').modal('hide'); // hode register driver modal
+
+      
+
+     var emailId= $('#emailId').val();
+     var password= $('#password').val();
+    
+     var data = {
+    "emailId":emailId,
+    "password":password
+     };
+  
+  //alert(JSON.stringify(data))
+     $.ajax({
+       
+         dataType:"json",
+         contentType: 'application/json; charset=UTF-8',
+        // url:"/requestBOL?assetId="+assetId,		
+        url:"/customer/login",	
+        data: JSON.stringify(data),
+         type:"POST",
+         global:false,
+         async:false, 
+         success: function(result){
+  
+         // alert(JSON.stringify(result))
+          if(result.hasOwnProperty('message')){
+            document.getElementById("credentialStatus").innerHTML = 'Incorrect credentials. Please try again.'; 
+            $('#credentialModal').modal();
+  
+            setTimeout(function(){ 
+                     
+                     window.location.href="index.html";
+                     return false;
+                  }, 2000);
+  
+          }else{
+            
+     
+            document.getElementById("credentialStatus").innerHTML = 'Welcome '+result.firstName+" "+result.lastName;
+            localStorage.setItem("DestcustomerId",result.customerId) 
+            localStorage.setItem("DestcustomerEmailId",result.emailId) 
+            localStorage.setItem("DestcustomerFirstName",result.firstName) 
+            localStorage.setItem("DestcustomerLastName",result.lastName) 
+            localStorage.setItem("DestcustomerPhoneNo",result.phoneNumber) 
+
+            document.getElementById('FedexCustomerFirstName').innerHTML=result.firstName;
+            document.getElementById('FedexCustomerLastName').innerHTML=result.lastName;
+            document.getElementById('FedexCustomerID').innerHTML=result.customerId;
+            document.getElementById('FedexCustomerPhoneNumber').innerHTML=result.phoneNumber;
+
+            document.getElementById('FedexCustomerEmailID').innerHTML=result.emailId;
+
+            
+            //loginModal
+            $('#credentialModal').modal();
+  
+            setTimeout(function(){ 
+              
+      $('#defaultLogin').hide();
+      $('#registerCustomer').hide();
+      $('#credentialModal').modal('hide');
+      document.getElementById("customerName").innerHTML = "Welcome "+result.firstName+" "+result.lastName; 
+      $('#loginSuccess').show();
+      $('#logOutOption').show();
+      $('#profileTab').show();
+      
+    }, 2000);
+  
+          }
+         }
+        })
+  
+    });
+  
+  </script>
+
+  
+
+
+
+
+</html>

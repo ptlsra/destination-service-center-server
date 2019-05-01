@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>FedExServiceCenter</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="assets/css/best-carousel-slide.css">
+    <link rel="stylesheet" href="assets/css/Customizable-Background--Overlay.css">
+    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="assets/DataTables/datatables.min.css"/>
+
+</head>
+
+<body class="changebodycolor">
+<nav class="navbar navbar-expand-lg bg-light navbar-light bg-color-navheader">
+  <a class="navbar-brand" id="titlenav">
+    <img src="assets/img/fedexIcon.png" alt="FeEx" height="40px;">
+    </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"  aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12" id="content-heading" style="color:white;">
+            <br>
+            FedEx Road Driver Services 
+            
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="container">
+  <!-- Nav pills -->
+  <ul class="nav nav-pills nav-justified" role="tablist" style="color:white;">
+    <li class="nav-item">
+      <a class="nav-link active whitecolor" data-toggle="pill" href="#home">Profile</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link whitecolor" data-toggle="pill" href="#shipmentDispatchRequest">Shipment Dispatch</a>
+    </li>
+   
+    <li class="nav-item">
+      <a class="nav-link whitecolor" data-toggle="pill" href="#allTxForRoadDriver" >All Transactions</a>
+    </li>
+
+   
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="home" class="container tab-pane active"><br>
+     
+          <h5>Profile Details :</h5>
+          <br>
+          <table class="table table-bordered">
+          <tr>
+            <td>Driver ID</td>
+            <td id="roadDriverId" class="boldstyle"></td>
+            </tr>
+
+            <tr>
+                <td>Type</td>
+                <td id="roadDriverType"  class="boldstyle"></td>
+
+              </tr>
+
+              
+            <tr>
+                <td>Email</td>
+                <td id="roadDriverEmailID"  class="boldstyle"></td>
+                </tr>
+
+                <tr>
+                    <td>FirstName</td>
+                    <td id="roadDriverFirstName" class="boldstyle"></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>LastName</td>
+                        <td id="roadDriverLastName" class="boldstyle"></td>
+                        </tr>     
+                        
+
+                        <tr>
+                            <td>Service Centre with which Driver is registered</td>
+                            <td id="roadDriverServiceCenterId" class="boldstyle"></td>
+                            </tr>                                            
+          </table>
+    </div>
+    <div id="shipmentDispatchRequest" class="container tab-pane fade" style="color:black;background-color:#f3f0ff;margin-top:20px;font-size:12px;"><br>
+    <br>
+      
+      <div >
+  
+          <table class="table-fill table-bordered" id="viewShipmentRequestForRoadDriver" style="color:black;background-color:white;width:95%">
+        
+            </table>
+            </div>
+      </div>
+      
+
+   
+    <div id="allTxForRoadDriver" class="container tab-pane fade"><br>
+      <h3>All Transctions</h3>
+      <p>List of all Transactions</p>
+    </div>
+
+
+   
+
+  </div>
+  </div>
+
+</div>
+
+
+
+<br>
+<footer id="footer">
+    
+    <div id="footer-container">
+        <p id="footer-content">
+             <img src="assets/img/Logo.png">
+            Developed by BlockChain COE |Mphasis Ltd.</p>
+    </div>
+</footer>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/DataTables/datatables.min.js"></script>
+    <script src="assets/js/allShipmentRequestForRoadDriver.js"></script>
+
+    
+
+    <script>
+      var getUrlParameter = function getUrlParameter(sParam) {
+	    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+	        sURLVariables = sPageURL.split('&'),
+	        sParameterName,
+	        i;
+
+	    for (i = 0; i < sURLVariables.length; i++) {
+	        sParameterName = sURLVariables[i].split('=');
+
+	        if (sParameterName[0] === sParam) {
+	            return sParameterName[1] === undefined ? true : sParameterName[1];
+	        }
+	    }
+	};
+
+  var driverId = getUrlParameter('driverId');
+
+  	$.get("/driver/"+driverId, function(response){
+
+document.getElementById('roadDriverId').innerHTML=driverId;
+document.getElementById('roadDriverType').innerHTML=response.driverType;
+
+document.getElementById('roadDriverEmailID').innerHTML=response.emailId;
+document.getElementById('roadDriverFirstName').innerHTML=response.firstName;
+
+document.getElementById('roadDriverLastName').innerHTML=response.lastName;
+
+          
+document.getElementById('roadDriverServiceCenterId').innerHTML=response.scId;
+
+                    
+
+    });
+  
+
+      </script>
+          <script src="assets/js/allPickupRequestForDriver.js"></script>
+
+
+
+</body>
+
+</html>
